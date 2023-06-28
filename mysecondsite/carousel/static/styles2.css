@@ -1,0 +1,131 @@
+/*Design ideas by 'https://csslayout.io/split-screen/' 
+  https://webflow.com/blog/best-color-combinations 
+*/
+
+html,
+body {
+  margin: 0px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*Scarlet #B85042, Light Olive #E7E8D1, Light Teal #A7BEAE*/
+
+p {
+  text-align: center;
+  color: #B85042;
+  background-color: #E7E8D1;
+
+}
+
+ul{
+  list-style-type: none;
+margin: 0%;
+padding-left: 0%;
+}
+
+ul li{
+  margin-bottom: 3px;
+  margin-left: 0%;
+}
+
+
+.side{
+  text-align: center;
+  color:#A7BEAE;
+  background-color: #00539C;
+}
+
+.container {
+  display: flex;
+  margin-top: 1%;
+  background-color: #E7E8D1;
+  padding: 0%;
+
+}
+
+.side {
+  width: 30%;
+  margin: 1pt;
+}
+
+.main {
+ flex: 1;
+  margin: 1pt;
+}
+
+img {
+  width: auto;
+  height: 96vh;
+  object-fit: cover;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider https://www.w3schools.com/howto/howto_css_switch.asp */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* https://www.w3schools.com/css/css3_buttons.asp */
+#bt:hover {background-color: #178582}
+#bt:active {
+    background-color: #178582;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+  }

@@ -1,0 +1,25 @@
+{
+    "picture":[
+        {"src":"Pic/Trixie_1.jpg", "text":"Trixie as a kitten." },
+        {"src":"Pic/Trixie_2.jpg", "text":"Trixie as my assistant."},
+        {"src":"Pic/Trixie_3.jpg", "text":"Trixie looking serious."},
+        {"src":"Pic/Trixie_4.jpg", "text":"Trixie profile picture."},
+        {"src":"Pic/Trixie_5.jpg", "text":"Trixie as a kitten on her new chair."},
+        {"src":"Pic/kitty.jpg", "text":"Trixie napping like a queen."},
+        {"src":"Pic/Luna.jpg", "text":"Luna at obedience, graduation day."},
+        {"src":"Pic/Luna_2.jpg", "text":"Luna after a bath."},
+        {"src":"Pic/Friends.jpg", "text":"Trixie and Luna standing watch."},
+        {"src":"Pic/Friends_2.jpg", "text":"Trixie and Luna first kiss."},
+        {"src":"Pic/Friends_3.jpg", "text":"Luna trying not to squash the kitten."},
+        {"src":"Pic/Spot.jpg", "text":"Spot the rooster."},
+        {"src":"Pic/Spot_2.jpg", "text":"Spot and Dotty."},
+        {"src":"Pic/Pip.jpg",   "text":"Pip, fresh out of the shell."},
+        {"src":"Pic/Pip_2.jpg","text":"Pip growing up."},
+        {"src":"Pic/Chick_1.jpg","text":"Boop showing off her feathers."},
+        {"src":"Pic/Chick_2.jpg","text":"Pip trying out the hand perch." },
+        {"src":"Pic/Ducks.jpg", "text":"Ducks, group shot." },
+        {"src":"Pic/Foxy.jpg", "text":"Foxy, boss lady."},
+        {"src":"Pic/Freeda.jpg", "text":"Freeda, Foxy's bestie."}
+
+    ]
+}

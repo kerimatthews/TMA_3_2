@@ -1,0 +1,77 @@
+/*
+    Author: Keri Matthews
+    For: Computer Science 466: Advanced Technologies for Web-Based Systems
+    Assignment 1, Part 3
+
+    External Stylesheet for Web Tutor application
+*/
+
+body{
+    margin: 1px 1px;
+    padding: 0px;
+    background-color: white;
+    color:#32312f;
+    font-family: "Noto Sans", sans-serif;
+    font-size:14px;
+    text-align: left;
+}
+
+
+header, footer{
+    background-color: rgb(162, 187, 190);
+    margin: 0;
+    padding: 2px;
+    box-shadow: 0px 2px 1px grey;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+canvas{
+
+    position: relative;
+    left: 0px;
+    top: 0px;
+    border-style: solid;
+
+}
+
+button{
+    width: 150px;
+    height: 40px;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+nav {
+    margin: 10px;
+    border-radius: 5px;
+    height: 100%;
+    background-color: white;
+    position: relative;
+    float: left;
+    text-indent: none;
+
+}
+
+
+h1{
+    font-family:Oswald, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h2{
+    font-family: Oswald, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+}
+h3{
+    font-family: Tahoma, sans-serif;
+    font-size: 14px;
+}

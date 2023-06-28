@@ -1,0 +1,235 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Image Carousel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'styles2.css' %}">
+
+<body>  
+ <div class="container" >
+    <!-- Sidebar -->
+    <aside class="side" >
+
+    <h1 style="margin-top: 15%; font-size: x-small;">Assignment 3 Question 2 - COMP466 </h1><br>
+    <h2>Image Carousel</h2>
+    <br>featuring: my pets!
+    <h6>by Keri Matthews</h6>
+
+
+
+    <!-- Controls buttons http://www.java2s.com/Tutorials/HTML_CSS/Bootstrap_Example/Carousel/Control_Carousel_in_Javascript.htm-->
+    <div class="control-buttons">
+      <ul>
+        <li>...</li>
+        <li> <input id="bt" type="button" class="btn btn-info start-slide" value="Start">  <input id="bt" type="button" class="btn btn-info pause-slide" value="Stop"> </li> 
+        <li>...</li>
+        <li><h5>Randomize</h5></li>
+        <li>  <!-- Rounded switch -->
+          off
+          <label class="switch">
+            <input type="checkbox" id="randomize">
+            <span class="slider round"></span>
+          </label>
+          on
+        </li> 
+        <li>...</li>
+        <li>  <input id="bt" type="button" class="btn btn-info prev-slide" value="Previous" id="previous_button">  <input id="bt" type="button" class="btn btn-info next-slide" value="Next" id="next_button"> </li> 
+        <!--li>  <input type="button" class="btn btn-info next-slide-random" value="Next Random Slide"> </li--> 
+      </ul>
+    </div>
+
+
+  </aside>
+    
+  <!-- Main -->    
+  <main class="main">
+   
+  <!-- https://www.w3schools.com/bootstrap5/bootstrap_carousel.php-->  
+  <!-- Carousel -->
+  <div id="show" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#show" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="6" aria-label="Slide 7"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="7" aria-label="Slide 8"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="8" aria-label="Slide 9"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="9" aria-label="Slide 10"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="10" aria-label="Slide 11"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="11" aria-label="Slide 12"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="12" aria-label="Slide 13"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="13" aria-label="Slide 14"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="14" aria-label="Slide 15"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="15" aria-label="Slide 16"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="16" aria-label="Slide 17"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="17" aria-label="Slide 18"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="18" aria-label="Slide 19"></button>
+    <button type="button" data-bs-target="#show" data-bs-slide-to="19" aria-label="Slide 20"></button>
+  </div>
+
+  <!-- The show/carousel -->
+  <div class="carousel-inner">
+    {% for x in my_pics %}
+      {% if x.num == 1 %}
+
+      <div class="carousel-item active" >
+        <img src= "{{ x.image.url }}" alt="Pic" class="d-block w-100">
+        <div class="carousel-caption">
+          <p>{{ x.caption }}</p>
+        </div>
+      </div>
+      {% else %}
+      <div class="carousel-item ">
+        <img src= "{{ x.image.url }}" alt="Pic" class="d-block w-100">
+        <div class="carousel-caption">
+          <p>{{ x.caption }}</p>
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+
+  </div>
+
+  <!-- Left and right controls/icons 
+  <button class="carousel-control-prev" type="button" data-bs-target="#show" data-bs-slide="prev" id="previous_button">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#show" data-bs-slide="next" id="next_button">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+  -->
+</div>
+
+
+    </main>
+
+ </div>
+
+ <script>
+
+$(document).ready(function(){<!--from   w w w .  j a  v  a2 s . com-->
+  // Initializes the carousel
+  let stopped=false;
+  const cb = document.querySelector('#randomize'); //checks if checkbox is checked
+
+  //If start button pressed
+    $(".start-slide").click(function(){
+      stopped=false;
+    console.log('random? '+cb.checked); 
+
+    if(cb.checked){
+      let next_rand=getRndInteger(0,19);
+      $("#show").carousel(next_rand);
+    }else{
+      $("#show").carousel('cycle');
+    }
+    });
+
+  // Stops the carousel
+    $(".pause-slide").click(function(){
+      $("#show").carousel('pause');
+      stopped=true;
+    });
+  // Cycles to the previous item
+    $(".prev-slide").click(function(){
+      $("#show").carousel('prev');
+      
+    });
+  // Cycles to the next item
+    $(".next-slide").click(function(){
+      $("#show").carousel('next');
+    });
+
+    // Cycles to the next random item
+      $(".next-slide-random").click(function(){
+      let next_rand=getRndInteger(0,19);
+      $("#show").carousel(next_rand);
+    });
+
+    let time=0;
+    //Toggles Random
+    $('#show').on('slid.bs.carousel', function (e) {
+    console.log('landed on '+e.from);
+    console.log('going to ' +e.to);
+
+    const cb = document.querySelector('#randomize'); //checks if checkbox is checked
+    console.log(cb.checked); 
+    $("#show").carousel('pause');
+    if(cb.checked){
+
+      if(stopped){
+        console.log('stopped'); 
+      }else{
+    let next_rand=getRndInteger(0,19);
+
+    time=setTimeout(function() {
+      if(stopped){    
+        $("#show").carousel('pause');
+      }else{  
+    $("#show").carousel(next_rand);}
+    }, 5000)
+      
+    }
+    }else{
+      clearTimeout(time);
+      $("#show").carousel('cycle');
+    }
+  
+  })
+
+  $("#randomize").change(function() {
+    if(this.checked) {
+       console.log('Random checked')
+
+       setDisable('next_button');
+       setDisable('previous_button');
+       if(stopped){
+        console.log('stopped'); 
+      }else{
+      let next_rand=getRndInteger(0,19);
+      $("#show").carousel(next_rand);}
+  
+    }else{
+      console.log('Random unchecked')
+      clearTimeout(time);
+      $("#show").carousel('next');
+      setAble('next_button');
+       setAble('previous_button');
+
+    }
+});
+
+});
+
+function setDisable(id){
+let get = document.getElementById(id);
+get.setAttribute('disabled', true);
+}
+
+function setAble(id){
+let element = document.getElementById(id);
+element.removeAttribute("disabled");
+}
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+</script>
+
+
+  </script>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

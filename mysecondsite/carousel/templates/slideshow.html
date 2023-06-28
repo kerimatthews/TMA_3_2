@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+    Author: Keri Matthews
+    For: Computer Science 466: Advanced Technologies for Web-Based Systems
+    Assignment 1, Part 3
+
+-->
+
+<html lang="en-us">
+
+<head>
+
+    <link rel = "stylesheet" type = "text/css" href = "stylesheet.css">
+        <meta charset="UTF-8">
+        <title>Slideshow</title>
+</head>
+<body>
+
+    <header>    
+    <h2><a href="slideshow.html">HTML 5 Canvas Slideshow</a></h2> 
+    <p>This is a web application created to showcase HTML5 Canvas for the course
+        COMP 466 - Advanced Technology for Web-Based Systems </p>   
+    </header>
+
+    <div id="content">
+
+    <nav>
+        <form>
+            <h4>Playback Order</h4>
+            <input type="radio" id="seq" name="playback" value="Sequential" checked>
+            <label for="seq">Sequential</label>
+            <input type="radio" id="rand" name="playback" value="Random" >
+            <label for="rand">Random</label><br><br>
+        <button type="button" onclick="nextpic()">Next</button>
+        <button type="button" onclick="previouspic()">Previous</button><br>
+        <button type="button" onclick="startShow()">Start</button>
+        <button type="button" onclick="stopShow()">Stop</button><br>
+        <h4>Transition type</h4>
+        <select  name="transition" id="tran" >
+            <option value="none" id="none">None</option>
+            <option value="fade" id="fade">Fade</option>
+            <option value="swipe" id="swipe">Swipe</option>
+            <option value="scale" id="scale">Scale</option>
+        </select>
+        </form>
+    </nav>
+
+    <canvas id="slideshow" width="500" height="667"></canvas>
+
+    </div>
+     <footer>
+            <p>by Keri Matthews 2022</p>
+     </footer>
+   <script src="slide.js" type="text/javascript"></script> 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+    </body>
+</html>
